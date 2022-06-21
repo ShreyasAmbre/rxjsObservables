@@ -1,3 +1,38 @@
+# --------------------------------------------  Concepts  --------------------------------------------  
+1. Promises
+-> It is use when we want to execute some line of code but reuired data is yet to com from API response 
+-> In this scenario below code will wait until API function is completed and data is present to provide to below code
+
+
+2. ASYNC / AWAIT
+-> Works similar as promise ASYNC function always return promise 
+-> AWAIT is used only inside ASYN Function and it is used only on promise created outside 
+-> that AWAIT keyword wait for PROMISE to get resolve only then below code will run
+
+3. fromEvent Observables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --------------------------------------------  Project Details --------------------------------------------  
+
 # RxjsObservables
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
