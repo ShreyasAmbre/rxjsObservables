@@ -10,6 +10,10 @@
 -> that AWAIT keyword wait for PROMISE to get resolve only then below code will run
 
 3. fromEvent Observables
+-> It is an inbuild Observables in RxJS
+-> fromEvent keep listening for DOM Element EventLister
+-> it accept two parameters, => reference of ELEMENT and EVENT NAME
+-> now we can subscribe to that observales and detect when event is triggerent from DOM element  
 
 
 

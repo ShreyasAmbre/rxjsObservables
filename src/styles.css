@@ -14,3 +14,8 @@
 button:hover {
     color: var(--btn-color) !important;
 }
+
+
+.lightbtn:hover{
+    color: var(--text-color) !important;
+}

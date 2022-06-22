@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PromisesComponent } from './pages/promises/promises.component';
 import { ObservablesComponent } from './pages/observables/observables.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AllobservablesComponent } from './pages/allobservables/allobservables.component';
+import { FromeventobservablesComponent } from './pages/fromeventobservables/fromeventobservables.component'
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     PromisesComponent,
     ObservablesComponent,
+    AllobservablesComponent,
+    FromeventobservablesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-4">
+        <div class="card p-0">
+            <h5 class="card-header">Add Video</h5>
+            <div class="card-body">
+              <p class="card-text">FromEvent method to create an observable from DOM events directly</p>
+              <a class="btn btnClass" #fromEventBtn>Add</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card p-0">
+            <h5 class="card-header">List</h5>
+            <div class="card-body">
+                <ul>
+                    <li *ngFor="let item of videoCountCreated">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
