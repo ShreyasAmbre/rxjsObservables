@@ -13,7 +13,20 @@
 -> It is an inbuild Observables in RxJS
 -> fromEvent keep listening for DOM Element EventLister
 -> it accept two parameters, => reference of ELEMENT and EVENT NAME
--> now we can subscribe to that observales and detect when event is triggerent from DOM element  
+-> now we can subscribe to that observales and detect when event is triggerent from DOM element
+
+4. of and from Observables
+-> of Observables is used to convert the Object into Stream 
+-> from Observables is used to convert Array into Single Single Stream
+
+5. toArray() Observables
+-> toArray() Observables is used to convert Single Single Stream into Array 
+-> In our code we have also use take() rxjs operator to terminate the interval after 5 second
+    so that array can container 1 to 5 second number in array  
+    -> Basically it is used to terminate the main Observables after number mention in take() is completed
+
+
+6. 
 
 
 

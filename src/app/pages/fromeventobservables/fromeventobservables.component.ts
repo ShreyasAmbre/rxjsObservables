@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
+import { ServicesobservablesService } from 'src/app/services/servicesobservables.service';
 
 @Component({
   selector: 'app-fromeventobservables',
@@ -11,13 +12,13 @@ export class FromeventobservablesComponent implements OnInit {
   videoCountCreated:any = []
   count: number = 1
 
-  constructor() { }
+  constructor(private service : ServicesobservablesService) { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(){
-    fromEvent(this.fromEventBtn.nativeElement, 'click').subscribe(res => {
+    this.service.fromEventObservables(this.fromEventBtn.nativeElement, 'click').subscribe(res=> {
       this.count++
       let val = `Video ${this.count}`
       this.videoCountCreated.push(val)

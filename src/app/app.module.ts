@@ -8,7 +8,9 @@ import { PromisesComponent } from './pages/promises/promises.component';
 import { ObservablesComponent } from './pages/observables/observables.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AllobservablesComponent } from './pages/allobservables/allobservables.component';
-import { FromeventobservablesComponent } from './pages/fromeventobservables/fromeventobservables.component'
+import { FromeventobservablesComponent } from './pages/fromeventobservables/fromeventobservables.component';
+import { OffromObservablesComponent } from './pages/offrom-observables/offrom-observables.component';
+import { ToarrayobservablesComponent } from './pages/toarrayobservables/toarrayobservables.component'
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FromeventobservablesComponent } from './pages/fromeventobservables/from
     ObservablesComponent,
     AllobservablesComponent,
     FromeventobservablesComponent,
+    OffromObservablesComponent,
+    ToarrayobservablesComponent,
   ],
   imports: [
     BrowserModule,

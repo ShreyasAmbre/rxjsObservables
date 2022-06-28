@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-6">
+        <h5>OF Observables</h5>
+        <p>Of operator in observables convert Object into stream</p>
+        <p class="border rounded bg-light py-2 px-3">of( &#123; firstName: "Shreyas", middleName:"Sujata", lastName: "Shrikant" &#x7D; )</p>
+
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">{{ofObsData.firstName}}</li>
+                      <li class="list-group-item">{{ofObsData.middleName}}</li>
+                      <li class="list-group-item">{{ofObsData.lastName}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <h5>FROM Observables</h5>
+        <p>from operator in observables convert Array into stream</p>
+        <p class="border rounded bg-light py-2 px-3">from([1, 2, 3, 4, 5, 6, 7, 8, 9])</p>
+
+        <div class="row">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="elContainer"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
