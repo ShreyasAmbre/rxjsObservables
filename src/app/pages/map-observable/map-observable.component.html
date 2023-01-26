@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col">
+        <h5>Map Observables</h5>
+        <p>Map Operator is used to transform the data as per our need and then passed that transformed data to component</p>
+
+        <div class="row containerHeight">
+            <div class="col-5" style="margin-top: 0.9%;">
+                <div>
+                    <p class="border rounded bg-light py-2 px-3"><b class="verticalAlignment ">Ex :- 01 </b>(Map Observable) </p>
+                    <hr>
+                    <p class="border rounded bg-light py-2 px-3">Here String API response is converted to JSON OBJECT you can obser this on console tab</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                                <ng-container *ngFor="let item of resData; let i = index">
+                                    <li class="list-group-item">{{i + 1}} {{item.name}}</li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5" style="margin-top: 0.9%;">
+                <div>
+                    <p class="border rounded bg-light py-2 px-3"><b class="verticalAlignment">Ex :- 02 </b> (Map Observable using FROM Operator) </p>
+                    <hr>
+                    <p class="border rounded bg-light py-2 px-3">'
+                        Here we convert Array Of Object which we get from API RES into single single stream (USING FROM operator) 
+                        and pass that single stream inside (MAP OPERATOR) and Modifies the name (Leanne Graham => Mr. Leanne Graham) and then pass that single single Modified stream inside component
+                        But in component we have t store modified names into array and from() operator give single stream so to convert single stream into array we use
+                        toArray() which convert single single stream into Array
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                                <ng-container *ngFor="let item of modifedRes; let i = index">
+                                    <li class="list-group-item">{{i + 1}}. {{item}}</li>
+                                </ng-container>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+</div>

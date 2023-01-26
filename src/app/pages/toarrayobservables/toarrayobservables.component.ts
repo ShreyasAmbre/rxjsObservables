@@ -12,6 +12,7 @@ export class ToarrayobservablesComponent implements OnInit {
 
   interval = 1000
   intervalSubscription: Subscription | undefined;
+  streamOfArray: any = [];
 
   constructor(private service: ServicesobservablesService) { }
 
@@ -20,6 +21,7 @@ export class ToarrayobservablesComponent implements OnInit {
       take(5),
       toArray()
     ).subscribe(res => {
+      this.streamOfArray = res
       console.log("SINGLE STREAM =>", res)
     })
 

@@ -11,6 +11,7 @@ export class OffromObservablesComponent implements OnInit {
   employeesData: object = {firstName: "Shreyas", middleName:"Sujata", lastName: "Shrikant"}
   ofObsData:any;
   data = [1,2,3,4,5,6,7,8,9]
+  fromObsData:any;
 
   constructor(private service: ServicesobservablesService) { }
 
@@ -18,6 +19,7 @@ export class OffromObservablesComponent implements OnInit {
   ngOnInit(): void {
     this.service.ofObservables(this.employeesData).subscribe(res=> {
       this.ofObsData = res
+      console.log("OBS of ===>", this.ofObsData)
     })
 
 

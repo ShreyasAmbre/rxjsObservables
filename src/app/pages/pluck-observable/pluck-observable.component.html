@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-6">
+        <h5>PLUCK Observables</h5>
+        <p>pluck operator in observables </p>
+        <p class="border rounded bg-light py-2 px-3">
+           Pluck operator is used to trasnform the Property of object  
+        </p>
+
+        <p class="border rounded bg-light py-2 px-3">
+            As we have seen in Map Operator we used from() operator convert array into single single stream and that single stream
+            pass inside map to modifies the res and get only res.name  using this " res.name " and pass it to inside of component and that is itreated  
+            but as we know to iterate Array is required and we get stream to converted that we use toArray() operator to convert that into array
+        </p>
+
+        <p>
+            So using pluck() operator <b>is a shorthand of Map Operator</b>  which help to pass only name to component <b>but her we can not modify the data</b>
+        </p>
+
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" *ngFor="let user of userName">{{user}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

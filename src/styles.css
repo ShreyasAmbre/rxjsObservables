@@ -19,3 +19,22 @@ button:hover {
 .lightbtn:hover{
     color: var(--text-color) !important;
 }
+
+
+.customObservable li{
+    list-style-type: none;
+    background:  rgb(233, 233, 233);
+    height: 40px;
+    padding: 1%;
+    margin: 2% 0px 2% 0px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.danger li {
+    background: rgb(255, 212, 212);
+}
+
+.success li{
+    background: rgb(212, 255, 215);
+}

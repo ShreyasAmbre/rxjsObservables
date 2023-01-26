@@ -10,7 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AllobservablesComponent } from './pages/allobservables/allobservables.component';
 import { FromeventobservablesComponent } from './pages/fromeventobservables/fromeventobservables.component';
 import { OffromObservablesComponent } from './pages/offrom-observables/offrom-observables.component';
-import { ToarrayobservablesComponent } from './pages/toarrayobservables/toarrayobservables.component'
+import { ToarrayobservablesComponent } from './pages/toarrayobservables/toarrayobservables.component';
+import { CustomobservableComponent } from './pages/customobservable/customobservable.component';
+import { MapObservableComponent } from './pages/map-observable/map-observable.component';
+import { PluckObservableComponent } from './pages/pluck-observable/pluck-observable.component';
+import { FilterObservableComponent } from './pages/filter-observable/filter-observable.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { ToarrayobservablesComponent } from './pages/toarrayobservables/toarrayo
     FromeventobservablesComponent,
     OffromObservablesComponent,
     ToarrayobservablesComponent,
+    CustomobservableComponent,
+    MapObservableComponent,
+    PluckObservableComponent,
+    FilterObservableComponent,
   ],
   imports: [
     BrowserModule,

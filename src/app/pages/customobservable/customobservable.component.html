@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col">
+        <h5>Custome Observables</h5>
+        <p>Here we dont use inbuild RxJs Observables we create our own Observables using Observable, next(), error() & complete()</p>
+
+        <div class="row containerHeight">
+            <div class="col-5" style="margin-top: 0.9%;">
+                <div style="height: 50px;">
+                    <p><b class="verticalAlignment">Ex :- 01 (Manual Observable (onInit)) </b></p>
+                    <ul class="p-0 customObservable" id="elContainer"></ul>
+                </div>
+                <ul class="p-0 customObservable" id="elContainer1" style="margin-top: 3.9%;"></ul>
+            </div>
+            <div class="col-7">
+                <div style="height: 50px;">
+                    <p><b class="verticalAlignment">Ex :- 02 (Custom SetTimeOut Observable)</b>  &nbsp;
+                        <button type="button" class="btn btnClass" (click)="customSetTimeoutObservables()">Click Manual Observable</button>&nbsp;  
+                        <small class="verticalAlignment">Observable Failed :- {{observablesFailed}} </small>
+                    </p>
+                </div>
+                <ul class="p-0 customObservable" id="elContainer2" [ngClass]="{'danger': observablesFailed === true, 'success': observablesFailed === false}" ></ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <div>
+                    <p>
+                        <b class="verticalAlignment">Ex :- 03 (Interval Observable)  </b>
+                        <button type="button" class="btn btnClass" (click)="unSubscribeIntervalPbs()">unSubscribe Interval Observable</button>&nbsp;  
+                    </p>
+
+                    <ul class="p-0 customObservable" id="elContainer3"></ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+</div>

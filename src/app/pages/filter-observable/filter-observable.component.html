@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-6">
+        <h5>FILTER Observables</h5>
+        <p>pluck operator in observables </p>
+        <p><b>Ex: 01</b></p>
+        <hr>
+        <p class="border rounded bg-light py-2 px-3">
+           <b>Filter : </b> By UserId = 3
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let post of filteredPosts">
+                            <b>Post Title:- </b> {{post.title | titlecase}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
