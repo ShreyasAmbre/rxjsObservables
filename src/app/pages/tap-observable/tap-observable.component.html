@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-12">
+        <h5>TAP Observables</h5>
+        <p class="border rounded bg-light py-2 px-3">
+            Tap operator is mainly used to perform any task between two different operator 
+            some times it also use for debudding to know what data is passed from previous operator and what data is going to to pass 
+            to next operator. We can perform any code like validation if else condition , console.log() or any other thing. 
+        </p>
+
+        <p class="border rounded bg-light py-2 px-3">
+            In other words, you can say that the RxJS tap() operator is used to intercept 
+            each emission on the source observable and runs a function but returns an output that is identical to the source 
+            observable as long as it doesn't find any error. This operator is generally used for debugging observables for the 
+            correct values or performing other side effects.
+        </p>
+        
+        <div class="row">
+            <div class="col-6">
+                <p><b>Ex: 01 :- </b>
+                    In this example we get user data as response me modify that name 'Sir ' before the name and then pass to tap operator to 
+                    modify the user id from 1 => 01, and so on till 9 only we add condition to checkl the user id is below 9 onlt modified for that 
+                    and then pass to a component but before that we convert single single stream to an array using toArray() operator and pass it to 
+                    component.   
+                </p>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let user of userDataUsingTap">
+                            <b>{{user.id}} : {{user.name}}</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-6">
+                <p><b>Ex: 02 :- </b>In this example we take interval which return interval value on subscribe but we applied 
+                    pipe operator to modify the value and done want the interval to go printing continously so we unsubscribe it after interval 5 
+                    to do this we use tap operator after map to add the cond of unsubscribe in that block.  
+                </p>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="elContainer"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

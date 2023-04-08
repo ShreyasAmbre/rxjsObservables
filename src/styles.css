@@ -38,3 +38,8 @@ button:hover {
 .success li{
     background: rgb(212, 255, 215);
 }
+
+
+.pointer{
+    cursor: pointer;
+}

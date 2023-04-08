@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-12">
+        <h5>subject() Observables</h5>
+        <p class="border rounded bg-light py-2 px-3">
+            <b>Note:- </b>
+            Here we also see if user enter "Shreyas" then enter "ShreyasS" and then press backup quickly this string become
+            "Shreyas" after 2 second API gets call even the value is not change API is getting call to overcome this 
+            we use distinctUntilChange() operator.
+        </p>
+
+        <div class="row">
+            
+            <div class="col-12">
+                <div style="display: flex; justify-content: end;">
+                    <div class="alert alert-danger" role="alert">
+                        <b>{{subscribeValue}}</b>
+                    </div>
+                </div>
+                <p class="border rounded bg-light py-2 px-3"><b>Ex: 01 Subject() :- </b>
+                </p>
+                <hr>
+
+
+                <div class="row">
+                    <div class="col-6">
+                        <app-subject-child-aobservable></app-subject-child-aobservable>
+                    </div>
+                    <div class="col-6">
+                        <app-subject-child-bobservable></app-subject-child-bobservable>
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
+
+</div>

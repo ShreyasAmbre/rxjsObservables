@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-12">
+        <h5>take(), takeLast() & takeUntil()  Observables</h5>
+        <p class="border rounded bg-light py-2 px-3"> 
+            From the oberservable stream we can take data which are required this is use of take() operator
+        </p>
+
+        <div class="row">
+            <div class="col-4">
+                <p><b>Ex: 01 take(4) :- </b>
+                    In this example we use take() operator which take count as a parameter and only that much of stream (from start) is pass
+                    to next operator or to component. Here we get 10 users in original res but we pass only 4 user to component.
+                </p>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let user of userDataTake">
+                            <b>{{user.id}} : {{user.name}}</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <p><b>Ex: 02 takeLast(4):- </b>
+                    Here we use takeLast() operator which take count as a paramter and fetch only that much data (from the last) and 
+                    pass to next operator or a component.
+                </p>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <li class="list-group-item" *ngFor="let user of getUserDataTakeLast">
+                        <b>{{user.id}} : {{user.name}}</b>
+                    </li>
+                    <!-- <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="elContainer"></li>
+                    </ul> -->
+                </div>
+            </div>
+
+
+            <div class="col-4">
+                <p><b>Ex: 02 takeUntil():- </b>
+                </p>
+                <hr>
+                <div class="card" style="width: 18rem;">
+                    <li class="list-group-item" *ngFor="let user of getUserDataTakeLast">
+                        <b>{{user.id}} : {{user.name}}</b>
+                    </li>
+                    <!-- <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="elContainer"></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

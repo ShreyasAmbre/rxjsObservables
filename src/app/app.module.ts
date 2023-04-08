@@ -15,6 +15,12 @@ import { CustomobservableComponent } from './pages/customobservable/customobserv
 import { MapObservableComponent } from './pages/map-observable/map-observable.component';
 import { PluckObservableComponent } from './pages/pluck-observable/pluck-observable.component';
 import { FilterObservableComponent } from './pages/filter-observable/filter-observable.component';
+import { TapObservableComponent } from './pages/tap-observable/tap-observable.component';
+import { TakeObservableComponent } from './pages/take-observable/take-observable.component';
+import { DebounceDistinctUntilChangeObservableComponent } from './pages/debounce-distinct-until-change-observable/debounce-distinct-until-change-observable.component';
+import { SubjectObservableComponent } from './pages/subject-observable/subject-observable.component';
+import { SubjectChildAObservableComponent } from './pages/subject-child-aobservable/subject-child-aobservable.component';
+import { SubjectChildBObservableComponent } from './pages/subject-child-bobservable/subject-child-bobservable.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +36,12 @@ import { FilterObservableComponent } from './pages/filter-observable/filter-obse
     MapObservableComponent,
     PluckObservableComponent,
     FilterObservableComponent,
+    TapObservableComponent,
+    TakeObservableComponent,
+    DebounceDistinctUntilChangeObservableComponent,
+    SubjectObservableComponent,
+    SubjectChildAObservableComponent,
+    SubjectChildBObservableComponent,
   ],
   imports: [
     BrowserModule,

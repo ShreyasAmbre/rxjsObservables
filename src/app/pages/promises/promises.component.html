@@ -26,7 +26,7 @@
             <h3>Async / Await</h3>
             <button type="button" class="btn btnClass" (click)="asynFunction()">Async Call </button>
 
-            <div class="alert alert-primary my-3" role="alert">
+            <div class="alert alert-primary my-3" [ngClass]="asynMsg === 'DELETE WATCHLIST BROADCAST' ? 'alert-danger' : 'alert-success' " role="alert">
                 <b>{{asynMsg}}</b>
             </div>
         </div>

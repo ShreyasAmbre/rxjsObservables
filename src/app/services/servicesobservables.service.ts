@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from, fromEvent, interval, Subscription, Observable, of } from 'rxjs';
+import { from, fromEvent, interval, Subscription, Observable, of, observable, Subject, BehaviorSubject } from 'rxjs';
 import { ObserveOnOperator, ObserveOnSubscriber } from 'rxjs/internal/operators/observeOn';
-import { filter, map, pluck, toArray } from 'rxjs/operators';
+import { filter, map, pluck, take, takeLast, takeUntil, takeWhile, tap, toArray } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +13,13 @@ export class ServicesobservablesService {
   subscriptionCustomObservable = Subscription
 
   userData:any;
+
+
+  // takeUntilSubscribtion: Subject<boolean> = new Subject();
+  takeUntilSubscribtion: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+
+  subjectSubscribe = new Subject() 
 
   constructor(private httpc: HttpClient) { }
 
@@ -161,6 +168,105 @@ export class ServicesobservablesService {
     })
   }
 
+
+
+  getUserDataTap(){
+    return new Observable((observer:any) => {
+      this.httpc.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any) => {
+        console.log("TAP OPERATOR before from =>", res)
+
+        from(res).pipe(
+          map((res:any) => {
+              res.name = "Sir " + res.name
+              return res
+          })
+          , tap((res:any) => {
+            if(res.id <= 9 ){
+              res.id = "0" + res.id
+              console.log("TAP OPERATOR after map ===>", res);
+              return res
+            }
+          })
+          , toArray()
+        ).subscribe((resData:any) => {
+          observer.next(resData)
+        })
+
+      })
+    })
+  }
+
+
+  getIntervalValueTap(){
+    return new Observable((observer:any) => {
+      let int = interval(2000)
+
+      let sub =  int.pipe(
+        map(i => {
+          console.log("Interval =>", i)
+          return i
+        })
+        , tap(intervalVal => {
+          if(intervalVal > 5){
+            sub.unsubscribe()
+          }
+        })
+      ).subscribe(res => {
+        observer.next('Interval Value ' + res)
+      })
+    })
+  }
+
+
+
+  getUserDataTake(){
+    return new Observable((observer:any) => {
+      this.httpc.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any) => {
+        from(res).pipe(
+          take(4)
+          , toArray()
+        ).subscribe(res => {
+          observer.next(res)
+        })
+      })
+    })
+  }
+
+
+  getuserDataTakeLast(){
+    return new Observable((observer:any) => {
+      this.httpc.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any) => {
+        from(res).pipe(
+          takeLast(4)
+          , toArray()
+        ).subscribe((res => {
+          observer.next(res)
+        }))
+      })
+    })
+  }
+
+
+
+  getUserDataTakeUntil(){
+    return new Observable((observer:any) => {
+      this.httpc.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any) => {
+        // observer.next(res)
+        from(res).pipe(
+          tap((res:any) => {
+            console.log(res)
+            if(res.id >= 7){
+              this.takeUntilSubscribtion.next(true)
+            }
+          })
+          , takeUntil(this.takeUntilSubscribtion)
+          , toArray()
+        ).subscribe(res => {
+          observer.next(res)
+        })
+      })
+    })
+  }
 
 
 }

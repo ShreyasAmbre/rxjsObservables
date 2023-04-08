@@ -53,7 +53,43 @@ NOTE :- Till now we have seen inbuilt observales and custom observables (operato
 -> It filter out the data based on condition given if condition return true it return that data 
 
 
+10. Tap Operator
+-> Tap operator is mainly used to perform any task between two different operator some times it also use for debudding to know what data is passed from previous operator and what data is going to to pass to next operator 
+-> We can perform any code like validation if else condition , console.log() or any other thing.
 
+
+11. Take Operator
+-> From the oberservable stream we can take data which are required this is use of take() operator
+-> We have take(), takeLast(), takeUntil() operator
+-> take() :- Operator takes count as a parameter and only that much count of stream is passed further after that it get unsubscribe automatically to its source observables (previous observable)
+-> takeLast() :- Operator takes count as a parameter and return count of last streams of observables (previous streams skipped) and  last are passed in.
+-> takeUntil() :- Operator takes observable or a subject as a paramter untill that observables get subscribe streams are passed once
+that observables is subscribe its stops the stream for passin inside.
+
+
+
+12. Retry 
+
+
+13. DebounceTime, DistinctUntilChange() Operator
+-> debountTime() :-  Here we have use debounceTim() operator which wait for few time given by us and then execute the code below
+-> distinctUntilChanged() :- This operator used after debounceTime() it trigger after few time it also check wether the value is change or not only then the execute the below code.
+
+
+14. Subject and BehaviourSubject Observable
+-> Subject() 
+    :-  It is mostly used for data cross communication between component
+    :-  It is special type of observable generally we have 
+        In Observable we use Pipe, Operator & Subscribe
+        In Observer we use next(), error(), complete()
+    :-  It is special type because subject is Observable and Observer at same time. It meanse we can subscribe and also 
+        we can emit data using observer.next().
+
+
+
+
+
+ 
 
 
 
